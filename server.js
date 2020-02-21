@@ -3,7 +3,8 @@ const app = express();
 const bodyParser = require("body-parser");
 const config = require("config");
 const mongoose = require("mongoose");
-const PORT = config.get("port") || process.env.PORT;
+const path = require("path");
+const PORT = process.env.PORT || 5000;
 
 // parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -23,6 +24,10 @@ async function start() {
       useNewUrlParser: true,
       useUnifiedTopology: true,
       useCreateIndex: true
+    });
+
+    app.get("*", (req, res) => {
+      res.sendFile(path.join(__dirname, "client", "build", "index.html"));
     });
 
     app.listen(PORT, () => {
