@@ -1,0 +1,14 @@
+.footer-wrapper {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 10%;
+  background: rgb(33, 187, 128);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.fooer-item {
+  font-weight: bold;
+}

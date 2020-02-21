@@ -1,0 +1,107 @@
+.comment-wrapper {
+  width: 70%;
+  min-height: 70px;
+  background-color: rgb(153, 228, 222);
+  border-radius: 10px;
+  padding: 10px;
+  word-wrap: break-word;
+  position: relative;
+  margin: 20px;
+}
+
+.childComment-wrapper {
+  width: 50%;
+  min-height: 70px;
+  background-color: rgb(81, 105, 148);
+  border-radius: 10px;
+  padding: 10px;
+  word-wrap: break-word;
+  position: relative;
+  left: 10%;
+  margin: 20px;
+  color: white;
+}
+
+.author-name {
+  color: rgb(255, 145, 0);
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.text {
+  padding: 5px 0px 5px 0px;
+}
+
+.date {
+  color: rgb(53, 56, 56);
+  text-align: right;
+}
+
+.childComment-wrapper .date {
+  color: white;
+}
+
+.state-active {
+  cursor: pointer;
+  position: absolute;
+  bottom: 0;
+  left: -40px;
+  bottom: 10px;
+  width: 20px;
+  height: 20px;
+  background-image: url("../images/heart.svg");
+  background-size: cover;
+}
+
+.state-disabled {
+  cursor: pointer;
+  position: absolute;
+  bottom: 0;
+  left: -40px;
+  bottom: 10px;
+  width: 20px;
+  height: 20px;
+  background-image: url("../images/heart_disabled.svg");
+  background-size: cover;
+}
+
+.wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.comment-buttons button {
+  cursor: pointer;
+  background: #ee6e73;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 2px;
+  color: white;
+}
+
+.comment-buttons button:hover {
+  background: #dd8d8f;
+}
+
+.edited {
+  position: absolute;
+  left: 10px;
+  top: 5px;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.not-edited {
+  display: none;
+}
+
+.comment-buttons {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
